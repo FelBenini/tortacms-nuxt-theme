@@ -70,7 +70,7 @@ form button:hover {
 }
 
 form input {
-    border: 2px solid #505050;
+    border: 1px solid #505050;
     background-color: transparent;
     border-radius: 6px 0px 0px 6px;
     padding-left: 6px;
