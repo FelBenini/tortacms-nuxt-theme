@@ -6,5 +6,12 @@ export default defineNuxtConfig({
     families: {
       Montserrat: [100, 400, 600]
     }
+  },
+  app: {
+    head: {
+      title: 'tortaCMS Nuxt Theme',
+      charset: 'utf-8',
+      viewport: 'width=device-width, initial-scale=1'
+    }
   }
 })
