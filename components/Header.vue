@@ -1,6 +1,13 @@
 <template>
     <header :class="className">
-        <img src="/logo.svg" />
+        <nuxt-link to="/">
+            <img src="/logo.svg" />
+        </nuxt-link>
+        <span>
+            <nuxt-link to="/about">
+                About
+            </nuxt-link>
+        </span>
     </header>
 </template>
 
@@ -11,10 +18,15 @@ header {
     margin: 6px 1%;
     height: 46px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    padding: 12px;
-    border-radius: 6px;
+    padding: 6px 12px;
+    border-radius: 8px;
     transition: all ease 0.2s;
+}
+
+header a {
+    text-decoration: none;
 }
 
 .scrolled {
