@@ -20,6 +20,8 @@ const handleSubmit = (e: Event) => {
     e.preventDefault();
 }
 
+const searchValue = ref('')
+
 </script>
 
 <template>
@@ -29,7 +31,11 @@ const handleSubmit = (e: Event) => {
         </nuxt-link>
         <span>
             <form v-on:submit="handleSubmit">
-                <input placeholder="Search..." type="text" />
+                <input placeholder="Search..."
+                    type="text" 
+                    :value="searchValue"
+                    @input="e => searchValue = (e.target as HTMLButtonElement).value"
+                />
                 <button type="submit">
                     <img src="/search-icon.svg" />
                 </button>
