@@ -15,6 +15,5 @@ import '@/assets/globals.css'
 <style>
 main {
     padding-top: 84px;
-    height: 200dvh;
 }
 </style>
