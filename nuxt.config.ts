@@ -20,5 +20,9 @@ export default defineNuxtConfig({
     markdown: {
       anchorLinks: false
     }
+  },
+  routeRules: {
+    '/': {swr: 150},
+    '/**': {isr: true}
   }
 })
