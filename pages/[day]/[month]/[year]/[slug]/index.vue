@@ -7,8 +7,6 @@ const uri = `/api/post/${day}/${month}/${year}/${slug}`
 
 const {data, execute} = await useFetch(uri, {key: uri})
 
-console.log(data)
-
 if (!data.value) {
     throw createError({ statusCode: 404, statusMessage: 'Post not found' })
 }
