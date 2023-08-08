@@ -18,6 +18,6 @@ if (!data.value) {
 <template>
     <div>
         <h1>{{ data.title }}</h1>
-        <div>{{ data.content }}</div>
+        <MarkdownStringRenderer :markdownString="data.content" />
     </div>
 </template>

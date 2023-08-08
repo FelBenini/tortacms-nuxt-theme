@@ -45,7 +45,7 @@ const searchValue = ref('')
     </header>
 </template>
 
-<style>
+<style scoped>
 
 form {
     display: flex;

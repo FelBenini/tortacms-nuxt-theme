@@ -1,7 +1,9 @@
+import highlightjs from 'highlight.js'
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ["@nuxtjs/google-fonts"],
+  modules: ["@nuxtjs/google-fonts", '@nuxt/content'],
   googleFonts: {
     families: {
       Montserrat: [100, 400, 600]
@@ -14,4 +16,9 @@ export default defineNuxtConfig({
       viewport: 'width=device-width, initial-scale=1'
     }
   },
+  content: {
+    markdown: {
+      anchorLinks: false
+    }
+  }
 })
