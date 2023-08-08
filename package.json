@@ -12,6 +12,6 @@
     "@nuxt/devtools": "latest",
     "@nuxtjs/google-fonts": "^3.0.2",
     "@types/node": "^18.17.1",
-    "nuxt": "3.6.2"
+    "nuxt": "^3.6.5"
   }
 }
