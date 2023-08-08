@@ -26,9 +26,9 @@ const searchValue = ref('')
 
 <template>
     <header :class="className">
-        <nuxt-link to="/">
+        <NuxtLink :to="'/'">
             <img src="/logo.svg" />
-        </nuxt-link>
+        </NuxtLink>
         <span>
             <form v-on:submit="handleSubmit">
                 <input placeholder="Search..."
@@ -40,7 +40,7 @@ const searchValue = ref('')
                     <img src="/search-icon.svg" />
                 </button>
             </form>
-            <nuxt-link to="/about">About</nuxt-link>
+            <NuxtLink to="/about">About</NuxtLink>
         </span>
     </header>
 </template>

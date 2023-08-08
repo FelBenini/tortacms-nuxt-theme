@@ -15,6 +15,8 @@ export default defineNuxtConfig({
     }
   },
   routeRules: {
-    '/': { swr: 400 }
+    '/': {isr: true},
+    '/about': {isr: true},
+    '/**': { isr: true }
   }
 })
