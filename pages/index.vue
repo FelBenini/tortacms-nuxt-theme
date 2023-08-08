@@ -1,7 +1,8 @@
 <script setup>
-const uri = `https://tortacms-back.vercel.app/api/posts`
+const uri = `/api/posts`
 
-const {data} = await useFetch(uri, {key: uri})
+const {data, execute} = await useFetch(uri, {key: uri})
+
 </script>
 
 <template>

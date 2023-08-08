@@ -1,17 +1,17 @@
 <script setup>
 const route = useRoute()
 
-const { date, slug } = route.params
+const { day, month, year, slug } = route.params
 
-const uri = `https://tortacms-back.vercel.app/api/post/${date.replaceAll('-', '/')}/${slug}`
+const uri = `/api/post/${day}/${month}/${year}/${slug}`
 
-const {data} = await useFetch(uri, {key: uri})
+const {data, execute} = await useFetch(uri, {key: uri})
 
 console.log(data)
 
 if (!data.value) {
     throw createError({ statusCode: 404, statusMessage: 'Post not found' })
-  }
+}
 
 </script>
 
