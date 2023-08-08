@@ -1,5 +1,5 @@
 <script setup>
-const props = defineProps(['title', 'summary', 'backgroundImage'])
+const props = defineProps(['title', 'summary', 'backgroundImage', 'uri'])
 
 let displaySummary
 let displayBgImg
@@ -19,16 +19,22 @@ if (props.summary && props.summary.length >= 150 ) {
 </script>
 
 <template>
-    <div class="card">
-        <span :style="`background-image: url(${displayBgImg}); background-position: center; background-size: cover`"></span>
-        <div>
-            <h1>{{ title }}</h1>
-            <p v-if="summary">{{ displaySummary }}</p>
+    <NuxtLink :to="uri">
+        <div class="card">
+            <span :style="`background-image: url(${displayBgImg}); background-position: center; background-size: cover`"></span>
+            <div>
+                <h1>{{ title }}</h1>
+                <p v-if="summary">{{ displaySummary }}</p>
+            </div>
         </div>
-    </div>
+    </NuxtLink>
 </template>
 
 <style scoped>
+
+a {
+    text-decoration: none;
+}
 
 .card {
     margin: 0 auto;

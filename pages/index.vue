@@ -2,12 +2,11 @@
 const uri = `/api/posts`
 
 const {data, execute} = await useFetch(uri, {key: uri})
-
 </script>
 
 <template>
   <section v-for="post in data.posts">
-    <PostCard :title="post.title" :backgroundImage="post.backgroundImage" :summary="post.summary" />
+    <PostCard :title="post.title" :backgroundImage="post.backgroundImage" :summary="post.summary" :uri="'/' + post.postUrl" />
   </section>
 </template>
 
