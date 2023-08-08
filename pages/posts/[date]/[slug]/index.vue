@@ -5,7 +5,7 @@ const { date, slug } = route.params
 
 const uri = `https://tortacms-back.vercel.app/api/post/${date.replaceAll('-', '/')}/${slug}`
 
-const {data} = await useFetch(uri, {key: `uri`})
+const {data} = await useFetch(uri, {key: uri})
 
 console.log(data)
 
