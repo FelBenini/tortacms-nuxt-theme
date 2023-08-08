@@ -6,7 +6,17 @@ const {data, execute} = await useFetch(uri, {key: uri})
 </script>
 
 <template>
-  <div>
-    {{ JSON.stringify(data) }}
-  </div>
+  <section v-for="post in data.posts">
+    <PostCard :title="post.title" :backgroundImage="post.backgroundImage" :summary="post.summary" />
+  </section>
 </template>
+
+<style scoped>
+
+section {
+  width: 860px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+</style>
